@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ARGS=("$@" --listen 0.0.0.0 --port 3001)
+ARGS=("$@" --listen 0.0.0.0 --port 3001 --disable-xformers)
 
 export PYTHONUNBUFFERED=1
 echo "Starting ComfyUI"
