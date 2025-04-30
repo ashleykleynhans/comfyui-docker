@@ -28,12 +28,6 @@
 * [rclone](https://rclone.org/)
 * [Application Manager](https://github.com/ashleykleynhans/app-manager)
 * [CivitAI Downloader](https://github.com/ashleykleynhans/civitai-downloader)
-* [sd_xl_base_1.0.safetensors](
-  https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors)
-* [sd_xl_refiner_1.0.safetensors](
-  https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors)
-* [sdxl_vae.safetensors](
-  https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors)
 
 ## Available on RunPod
 

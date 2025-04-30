@@ -1,17 +1,6 @@
 ARG BASE_IMAGE
 FROM ${BASE_IMAGE}
 
-RUN mkdir -p /sd-models
-
-# Add SDXL models and VAE
-# These need to already have been downloaded:
-#   wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
-#   wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
-#   wget https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl_vae.safetensors
-ADD sd_xl_base_1.0.safetensors /sd-models/sd_xl_base_1.0.safetensors
-ADD sd_xl_refiner_1.0.safetensors /sd-models/sd_xl_refiner_1.0.safetensors
-ADD sdxl_vae.safetensors /sd-models/sdxl_vae.safetensors
-
 # Copy the build scripts
 WORKDIR /
 COPY --chmod=755 build/* ./
