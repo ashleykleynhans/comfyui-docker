@@ -11,7 +11,7 @@ variable "APP" {
 }
 
 variable "RELEASE" {
-    default = "v0.3.63"
+    default = "v0.3.64"
 }
 
 variable "BASE_IMAGE_REPOSITORY" {
