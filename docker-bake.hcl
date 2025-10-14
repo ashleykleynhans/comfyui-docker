@@ -11,11 +11,11 @@ variable "APP" {
 }
 
 variable "RELEASE" {
-    default = "v0.3.64"
+    default = "v0.3.65"
 }
 
 variable "RELEASE_SUFFIX" {
-    default = ".post1"
+    default = ""
 }
 
 variable "BASE_IMAGE_REPOSITORY" {
