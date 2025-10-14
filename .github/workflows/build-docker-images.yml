@@ -78,12 +78,26 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push all images
+      - name: Build and push all images (serially)
         env:
           REGISTRY: ghcr.io
           REGISTRY_USER: ${{ github.repository_owner }}
         run: |
-          docker buildx bake --push all
+          # Build images one at a time to avoid resource exhaustion
+          # Each image is 12-14GB so parallel builds would fail
+          echo "Building cu124-py311..."
+          docker buildx bake --push cu124-py311
+
+          echo "Building cu124-py312..."
+          docker buildx bake --push cu124-py312
+
+          echo "Building cu128-py311..."
+          docker buildx bake --push cu128-py311
+
+          echo "Building cu128-py312..."
+          docker buildx bake --push cu128-py312
+
+          echo "All images built successfully!"
 
       - name: List built images
         id: list-images
