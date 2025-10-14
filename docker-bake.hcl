@@ -15,7 +15,7 @@ variable "RELEASE" {
 }
 
 variable "RELEASE_SUFFIX" {
-    default = "post1"
+    default = ".post1"
 }
 
 variable "BASE_IMAGE_REPOSITORY" {
