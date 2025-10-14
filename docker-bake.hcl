@@ -15,7 +15,7 @@ variable "RELEASE" {
 }
 
 variable "RELEASE_SUFFIX" {
-    default = ""
+    default = "post1"
 }
 
 variable "BASE_IMAGE_REPOSITORY" {
@@ -23,7 +23,7 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "2.4.7"
+    default = "2.4.8"
 }
 
 group "default" {
