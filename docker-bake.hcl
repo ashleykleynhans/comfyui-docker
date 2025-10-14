@@ -49,7 +49,7 @@ target "cu124-py311" {
         TORCH_VERSION              = "2.6.0+cu124"
         XFORMERS_VERSION           = "0.0.29.post3"
         COMFYUI_VERSION            = "${RELEASE}"
-        APP_MANAGER_VERSION        = "1.2.2"
+        APP_MANAGER_VERSION        = "1.3.0"
         CIVITAI_DOWNLOADER_VERSION = "2.1.0"
     }
     platforms = ["linux/amd64"]
