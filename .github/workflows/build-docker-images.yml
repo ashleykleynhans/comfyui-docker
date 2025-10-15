@@ -70,7 +70,7 @@ jobs:
 
       - name: Free up disk space
         run: |
-          sudo swapoff /swapfile
+          sudo swapoff -a
           sudo rm -rf /swapfile /usr/share/dotnet /usr/local/lib/android /opt/ghc
           sudo apt clean
           df -h
