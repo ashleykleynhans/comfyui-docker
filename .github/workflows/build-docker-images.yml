@@ -189,7 +189,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### JSON Format (for APIs):" >> $GITHUB_STEP_SUMMARY
           echo '```json' >> $GITHUB_STEP_SUMMARY
-          echo "${{ needs.build-and-push.outputs.images_json }}" | jq '.' >> $GITHUB_STEP_SUMMARY
+          echo '${{ needs.build-and-push.outputs.images_json }}' | jq '.' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "📦 Download the image list from the artifacts section above." >> $GITHUB_STEP_SUMMARY
