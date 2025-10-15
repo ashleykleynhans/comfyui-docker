@@ -70,14 +70,10 @@ jobs:
 
       - name: Free up disk space
         run: |
-          # Remove unnecessary files to free up disk space
-          sudo rm -rf /usr/share/dotnet
-          sudo rm -rf /usr/local/lib/android
-          sudo rm -rf /opt/ghc
-          sudo rm -rf /opt/hostedtoolcache/CodeQL
-          sudo docker image prune -af
-          sudo docker container prune -f
-          sudo apt-get clean
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          docker rmi $(docker image ls -aq)
           df -h
 
       - name: Set up Docker Buildx
