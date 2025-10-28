@@ -10,6 +10,9 @@ git checkout ${COMFYUI_VERSION}
 python3 -m venv --system-site-packages venv
 source venv/bin/activate
 
+# Upgrade pip
+pip3 install --upgrade pip
+
 # Install torch, xformers and sageattention
 pip3 install --no-cache-dir torch=="${TORCH_VERSION}" torchvision torchaudio --index-url ${INDEX_URL}
 pip3 install --no-cache-dir xformers=="${XFORMERS_VERSION}" --index-url ${INDEX_URL}
@@ -17,7 +20,7 @@ pip3 install --no-cache-dir xformers=="${XFORMERS_VERSION}" --index-url ${INDEX_
 # Install requirements
 pip3 install -r requirements.txt
 pip3 install accelerate
-pip3 install sageattention
+pip3 install sageattention==1.0.6
 pip install setuptools --upgrade
 
 # Install ComfyUI Custom Nodes
