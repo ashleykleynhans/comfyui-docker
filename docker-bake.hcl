@@ -76,7 +76,7 @@ target "cu128-py311" {
     tags = ["${REGISTRY}/${REGISTRY_USER}/${APP}:cu128-py311-${RELEASE}${RELEASE_SUFFIX}"]
     args = {
         RELEASE                    = "${RELEASE}"
-        BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.11-cuda12.8.1-torch2.8.0"
+        BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.11-cuda12.8.1-torch2.9.1"
         INDEX_URL                  = "https://download.pytorch.org/whl/cu128"
         TORCH_VERSION              = "2.9.1+cu128"
         XFORMERS_VERSION           = "0.0.33"
@@ -92,7 +92,7 @@ target "cu128-py312" {
     tags = ["${REGISTRY}/${REGISTRY_USER}/${APP}:cu128-py312-${RELEASE}${RELEASE_SUFFIX}"]
     args = {
         RELEASE                    = "${RELEASE}"
-        BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.12-cuda12.8.1-torch2.8.0"
+        BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.12-cuda12.8.1-torch2.9.1"
         INDEX_URL                  = "https://download.pytorch.org/whl/cu128"
         TORCH_VERSION              = "2.9.1+cu128"
         XFORMERS_VERSION           = "0.0.33"
