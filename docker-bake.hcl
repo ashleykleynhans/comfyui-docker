@@ -23,7 +23,7 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "2.4.8"
+    default = "2.4.9"
 }
 
 group "default" {
@@ -78,8 +78,8 @@ target "cu128-py311" {
         RELEASE                    = "${RELEASE}"
         BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.11-cuda12.8.1-torch2.8.0"
         INDEX_URL                  = "https://download.pytorch.org/whl/cu128"
-        TORCH_VERSION              = "2.8.0+cu128"
-        XFORMERS_VERSION           = "0.0.32.post1"
+        TORCH_VERSION              = "2.9.1+cu128"
+        XFORMERS_VERSION           = "0.0.33"
         COMFYUI_VERSION            = "${RELEASE}"
         APP_MANAGER_VERSION        = "1.2.2"
         CIVITAI_DOWNLOADER_VERSION = "2.1.0"
@@ -94,8 +94,8 @@ target "cu128-py312" {
         RELEASE                    = "${RELEASE}"
         BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.12-cuda12.8.1-torch2.8.0"
         INDEX_URL                  = "https://download.pytorch.org/whl/cu128"
-        TORCH_VERSION              = "2.8.0+cu128"
-        XFORMERS_VERSION           = "0.0.32.post1"
+        TORCH_VERSION              = "2.9.1+cu128"
+        XFORMERS_VERSION           = "0.0.33"
         COMFYUI_VERSION            = "${RELEASE}"
         APP_MANAGER_VERSION        = "1.2.2"
         CIVITAI_DOWNLOADER_VERSION = "2.1.0"
