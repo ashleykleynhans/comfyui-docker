@@ -11,7 +11,7 @@ variable "APP" {
 }
 
 variable "RELEASE" {
-    default = "v0.3.76"
+    default = "v0.4.0"
 }
 
 variable "RELEASE_SUFFIX" {
@@ -23,7 +23,7 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "2.4.9"
+    default = "2.4.10"
 }
 
 group "default" {
