@@ -20,7 +20,7 @@
 * xformers 0.0.33 / 0.0.29.post3 (0.0.33 is default)
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
-* [ComfyUI](https://github.com/comfyanonymous/ComfyUI) v0.5.0
+* [ComfyUI](https://github.com/comfyanonymous/ComfyUI) v0.5.1
 * [runpodctl](https://github.com/runpod/runpodctl)
 * [OhMyRunPod](https://github.com/kodxana/OhMyRunPod)
 * [RunPod File Uploader](https://github.com/kodxana/RunPod-FilleUploader)
