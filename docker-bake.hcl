@@ -11,7 +11,7 @@ variable "APP" {
 }
 
 variable "RELEASE" {
-    default = "v0.7.0"
+    default = "v0.8.0"
 }
 
 variable "RELEASE_SUFFIX" {
@@ -24,6 +24,14 @@ variable "BASE_IMAGE_REPOSITORY" {
 
 variable "BASE_IMAGE_VERSION" {
     default = "2.4.11"
+}
+
+variable "APP_MANAGER_VERSION" {
+    default = "1.3.1"
+}
+
+variable "CIVITAI_DOWNLOADER_VERSION" {
+    default = "2.1.0"
 }
 
 group "default" {
@@ -49,8 +57,8 @@ target "cu124-py311" {
         TORCH_VERSION              = "2.6.0+cu124"
         XFORMERS_VERSION           = "0.0.29.post3"
         COMFYUI_VERSION            = "${RELEASE}"
-        APP_MANAGER_VERSION        = "1.3.0"
-        CIVITAI_DOWNLOADER_VERSION = "2.1.0"
+        APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
+        CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
     }
     platforms = ["linux/amd64"]
 }
@@ -65,8 +73,8 @@ target "cu124-py312" {
         TORCH_VERSION              = "2.6.0+cu124"
         XFORMERS_VERSION           = "0.0.29.post3"
         COMFYUI_VERSION            = "${RELEASE}"
-        APP_MANAGER_VERSION        = "1.2.2"
-        CIVITAI_DOWNLOADER_VERSION = "2.1.0"
+        APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
+        CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
     }
     platforms = ["linux/amd64"]
 }
@@ -81,8 +89,8 @@ target "cu128-py311" {
         TORCH_VERSION              = "2.9.1+cu128"
         XFORMERS_VERSION           = "0.0.33"
         COMFYUI_VERSION            = "${RELEASE}"
-        APP_MANAGER_VERSION        = "1.2.2"
-        CIVITAI_DOWNLOADER_VERSION = "2.1.0"
+        APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
+        CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
     }
     platforms = ["linux/amd64"]
 }
@@ -97,8 +105,8 @@ target "cu128-py312" {
         TORCH_VERSION              = "2.9.1+cu128"
         XFORMERS_VERSION           = "0.0.33"
         COMFYUI_VERSION            = "${RELEASE}"
-        APP_MANAGER_VERSION        = "1.2.2"
-        CIVITAI_DOWNLOADER_VERSION = "2.1.0"
+        APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
+        CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
     }
     platforms = ["linux/amd64"]
 }
