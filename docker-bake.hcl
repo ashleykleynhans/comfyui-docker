@@ -15,7 +15,7 @@ variable "RELEASE" {
 }
 
 variable "RELEASE_SUFFIX" {
-    default = "post1"
+    default = ".post1"
 }
 
 variable "BASE_IMAGE_REPOSITORY" {
@@ -23,7 +23,7 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "2.4.12"
+    default = "2.4.13"
 }
 
 variable "APP_MANAGER_VERSION" {
