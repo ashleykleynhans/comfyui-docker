@@ -13,9 +13,13 @@ source venv/bin/activate
 # Upgrade pip
 pip3 install --upgrade pip
 
-# Install torch, xformers and sageattention
+# Install torch
 pip3 install --no-cache-dir torch=="${TORCH_VERSION}" torchvision torchaudio --index-url ${INDEX_URL}
-pip3 install --no-cache-dir xformers=="${XFORMERS_VERSION}" --index-url ${INDEX_URL}
+
+# Install xformers if version is specified
+if [ -n "${XFORMERS_VERSION}" ]; then
+    pip3 install --no-cache-dir xformers=="${XFORMERS_VERSION}" --index-url ${INDEX_URL}
+fi
 
 # Install requirements
 pip3 install -r requirements.txt
