@@ -13,14 +13,23 @@
 
 ## Installs
 
+### Image Variants
+
+| Image          | CUDA   | Python | Torch  | xformers     |
+|----------------|--------|--------|--------|--------------|
+| cu128-py312 *  | 12.8.1 | 3.12   | 2.10.0 | -            |
+| cu128-py311    | 12.8.1 | 3.11   | 2.10.0 | -            |
+| cu124-py312    | 12.4.1 | 3.12   | 2.6.0  | 0.0.29.post3 |
+| cu124-py311    | 12.4.1 | 3.11   | 2.6.0  | 0.0.29.post3 |
+
+\* *default image*
+
+### All Images Include
+
 * Ubuntu 22.04 LTS
-* CUDA 12.8 / 12.4 (12.8 is default)
-* Python 3.12.9 / 3.11.12 (3.12.9 is default)
-* Torch 2.9.1 / 2.6.0 (2.9.1 is default)
-* xformers 0.0.33 / 0.0.29.post3 (0.0.33 is default)
+* [ComfyUI](https://github.com/comfyanonymous/ComfyUI) v0.11.0
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
-* [ComfyUI](https://github.com/comfyanonymous/ComfyUI) v0.10.0
 * [runpodctl](https://github.com/runpod/runpodctl)
 * [OhMyRunPod](https://github.com/kodxana/OhMyRunPod)
 * [RunPod File Uploader](https://github.com/kodxana/RunPod-FilleUploader)
