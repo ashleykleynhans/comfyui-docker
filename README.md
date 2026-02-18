@@ -27,7 +27,7 @@
 ### All Images Include
 
 * Ubuntu 22.04 LTS
-* [ComfyUI](https://github.com/comfyanonymous/ComfyUI) v0.14.1
+* [ComfyUI](https://github.com/comfyanonymous/ComfyUI) v0.14.2
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
 * [runpodctl](https://github.com/runpod/runpodctl)
