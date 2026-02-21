@@ -9,7 +9,7 @@ COPY --chmod=755 build/* ./
 ARG TORCH_VERSION
 ARG XFORMERS_VERSION
 ARG INDEX_URL
-ARG COMFYUI_COMMIT
+ARG COMFYUI_VERSION
 RUN /install_comfyui.sh
 
 # Install Application Manager
