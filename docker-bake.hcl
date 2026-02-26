@@ -23,7 +23,7 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "2.4.14"
+    default = "2.4.15"
 }
 
 variable "APP_MANAGER_VERSION" {
@@ -31,7 +31,7 @@ variable "APP_MANAGER_VERSION" {
 }
 
 variable "CIVITAI_DOWNLOADER_VERSION" {
-    default = "2.1.0"
+    default = "3.0.0"
 }
 
 group "default" {
