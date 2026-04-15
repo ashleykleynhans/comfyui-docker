@@ -23,7 +23,7 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "2.4.18"
+    default = "2.4.19"
 }
 
 variable "APP_MANAGER_VERSION" {
