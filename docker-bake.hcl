@@ -84,9 +84,9 @@ target "cu128-py311" {
     tags = ["${REGISTRY}/${REGISTRY_USER}/${APP}:cu128-py311-${RELEASE}${RELEASE_SUFFIX}"]
     args = {
         RELEASE                    = "${RELEASE}"
-        BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.11-cuda12.8.1-torch2.10.0"
+        BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.11-cuda12.8.1-torch2.11.0"
         INDEX_URL                  = "https://download.pytorch.org/whl/cu128"
-        TORCH_VERSION              = "2.10.0+cu128"
+        TORCH_VERSION              = "2.11.0+cu128"
         COMFYUI_VERSION            = "${RELEASE}"
         APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
         CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
@@ -99,9 +99,9 @@ target "cu128-py312" {
     tags = ["${REGISTRY}/${REGISTRY_USER}/${APP}:cu128-py312-${RELEASE}${RELEASE_SUFFIX}"]
     args = {
         RELEASE                    = "${RELEASE}"
-        BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.12-cuda12.8.1-torch2.10.0"
+        BASE_IMAGE                 = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.12-cuda12.8.1-torch2.11.0"
         INDEX_URL                  = "https://download.pytorch.org/whl/cu128"
-        TORCH_VERSION              = "2.10.0+cu128"
+        TORCH_VERSION              = "2.11.0+cu128"
         COMFYUI_VERSION            = "${RELEASE}"
         APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
         CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
