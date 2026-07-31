@@ -7,6 +7,23 @@ This image tracks upstream [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 releases, so most entries correspond to a ComfyUI version bump along with any
 base image, Torch, xformers, or tooling changes that shipped alongside it.
 
+## [v0.29.2] - 2026-07-31
+- Bump ComfyUI to v0.29.2.
+- Bump base image to 2.5.0.
+
+## [v0.29.0] - 2026-07-29
+- Bump ComfyUI to v0.29.0 and Application Manager to 2.0.1.
+
+## [v0.28.0] - 2026-07-15
+- Bump ComfyUI to v0.28.0.
+- Bump GitHub Actions workflows to latest versions.
+
+## [v0.27.0] - 2026-07-01
+- Bump ComfyUI to v0.27.0.
+- Fixed: `ddocker` typo breaking the cu128-py311 build, hardcoded app name in
+  the bake file, and add image verification matching the stable-diffusion-docker
+  workflow.
+
 ## [v0.26.0] - 2026-06-23
 - Bump ComfyUI to v0.26.0.
 - Fixed: stop forcing `numpy==1.26.4` at the end of the ComfyUI install.
