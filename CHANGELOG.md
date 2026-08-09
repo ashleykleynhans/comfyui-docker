@@ -7,6 +7,15 @@ This image tracks upstream [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 releases, so most entries correspond to a ComfyUI version bump along with any
 base image, Torch, xformers, or tooling changes that shipped alongside it.
 
+## [v0.31.0] - 2026-08-09
+- Bump ComfyUI to v0.31.0.
+- Fixed: ComfyUI crashing on startup on the cu124 images with
+  `Parameter kernel_size has unsupported type list[int]` from
+  `comfy-kitchen`'s `na3d` custom op. comfy-kitchen 0.2.28 (pinned by
+  ComfyUI v0.31.0) uses builtin `list[int]` annotations, which torch < 2.7
+  cannot infer; the cu124 images use torch 2.6.0. Pin comfy-kitchen to
+  0.2.27 on the cu124 images only.
+
 ## [v0.30.0] - 2026-08-03
 - Bump ComfyUI to v0.30.0.
 - Bump base image to 2.6.0.
