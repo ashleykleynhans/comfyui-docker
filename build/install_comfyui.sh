@@ -27,12 +27,27 @@ pip3 install accelerate
 pip3 install sageattention==1.0.6
 pip install setuptools --upgrade
 
-# Pin comfy-kitchen to a version compatible with the torch version in this image.
-# comfy-kitchen 0.2.28 added an na3d custom op using builtin list[int] annotations,
-# which torch < 2.7 cannot infer (torch 2.6.0 used by the cu124 images).
-if [ -n "${COMFY_KITCHEN_VERSION}" ]; then
-    pip3 install --no-cache-dir "comfy-kitchen==${COMFY_KITCHEN_VERSION}"
-fi
+# Patch comfy-kitchen's na3d custom op annotations so it works with torch < 2.7.
+# comfy-kitchen 0.2.28 (pinned by ComfyUI v0.31.0) uses builtin list[int]/
+# list[bool] annotations, which torch 2.6.0 (used by the cu124 images) cannot
+# infer. Only na.py is affected; swapping in typing.List keeps the version at
+# 0.2.28 so ComfyUI's version-compatibility check stays happy.
+python3 - <<'EOF'
+from pathlib import Path
+import sys
+
+matches = list(Path("/ComfyUI/venv/lib/python3.*/site-packages/comfy_kitchen/backends/eager").glob("na.py"))
+if not matches:
+    sys.stderr.write("comfy-kitchen na.py not found; skipping patch\n")
+    sys.exit(0)
+
+path = matches[0]
+src = path.read_text()
+src = src.replace("import torch\n", "import typing\n\nimport torch\n", 1)
+src = src.replace("kernel_size: list[int]", "kernel_size: typing.List[int]")
+src = src.replace("is_causal: list[bool]", "is_causal: typing.List[bool]")
+path.write_text(src)
+EOF
 
 # Install ComfyUI Custom Nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git custom_nodes/ComfyUI-Manager

@@ -34,10 +34,6 @@ variable "CIVITAI_DOWNLOADER_VERSION" {
     default = "3.0.0"
 }
 
-variable "COMFY_KITCHEN_VERSION" {
-    default = "0.2.28"
-}
-
 group "default" {
     targets = ["cu128-py312"]
 }
@@ -61,7 +57,6 @@ target "cu124-py311" {
         TORCH_VERSION              = "2.6.0+cu124"
         XFORMERS_VERSION           = "0.0.29.post3"
         COMFYUI_VERSION            = "${RELEASE}"
-        COMFY_KITCHEN_VERSION      = "0.2.27"
         APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
         CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
     }
@@ -78,7 +73,6 @@ target "cu124-py312" {
         TORCH_VERSION              = "2.6.0+cu124"
         XFORMERS_VERSION           = "0.0.29.post3"
         COMFYUI_VERSION            = "${RELEASE}"
-        COMFY_KITCHEN_VERSION      = "0.2.27"
         APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
         CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
     }
@@ -94,7 +88,6 @@ target "cu128-py311" {
         INDEX_URL                  = "https://download.pytorch.org/whl/cu128"
         TORCH_VERSION              = "2.11.0+cu128"
         COMFYUI_VERSION            = "${RELEASE}"
-        COMFY_KITCHEN_VERSION      = "${COMFY_KITCHEN_VERSION}"
         APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
         CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
     }
@@ -110,7 +103,6 @@ target "cu128-py312" {
         INDEX_URL                  = "https://download.pytorch.org/whl/cu128"
         TORCH_VERSION              = "2.11.0+cu128"
         COMFYUI_VERSION            = "${RELEASE}"
-        COMFY_KITCHEN_VERSION      = "${COMFY_KITCHEN_VERSION}"
         APP_MANAGER_VERSION        = "${APP_MANAGER_VERSION}"
         CIVITAI_DOWNLOADER_VERSION = "${CIVITAI_DOWNLOADER_VERSION}"
     }
