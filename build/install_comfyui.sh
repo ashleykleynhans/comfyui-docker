@@ -36,7 +36,7 @@ python3 - <<'EOF'
 from pathlib import Path
 import sys
 
-matches = list(Path("/ComfyUI/venv/lib/python3.*/site-packages/comfy_kitchen/backends/eager").glob("na.py"))
+matches = list(Path("/ComfyUI/venv").glob("lib/python3.*/site-packages/comfy_kitchen/backends/eager/na.py"))
 if not matches:
     sys.stderr.write("comfy-kitchen na.py not found; skipping patch\n")
     sys.exit(0)
