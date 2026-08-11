@@ -15,7 +15,9 @@ base image, Torch, xformers, or tooling changes that shipped alongside it.
   ComfyUI v0.31.0) uses builtin `list[int]`/`list[bool]` annotations, which
   torch < 2.7 cannot infer; the cu124 images use torch 2.6.0. Patch the
   installed `na.py` to use `typing.List[...]` instead, keeping comfy-kitchen
-  at 0.2.28 so ComfyUI's version-compatibility check is satisfied.
+  at 0.2.28 so ComfyUI's version-compatibility check is satisfied. The patch
+  only runs on torch < 2.7 images; the cu128 images (torch 2.11.0) handle
+  builtin generics natively and are left unpatched.
 
 ## [v0.30.0] - 2026-08-03
 - Bump ComfyUI to v0.30.0.

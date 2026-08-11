@@ -31,7 +31,11 @@ pip install setuptools --upgrade
 # comfy-kitchen 0.2.28 (pinned by ComfyUI v0.31.0) uses builtin list[int]/
 # list[bool] annotations, which torch 2.6.0 (used by the cu124 images) cannot
 # infer. Only na.py is affected; swapping in typing.List keeps the version at
-# 0.2.28 so ComfyUI's version-compatibility check stays happy.
+# 0.2.28 so ComfyUI's version-compatibility check stays happy. torch >= 2.7
+# (the cu128 images) handles builtin generics natively and needs no patch.
+TORCH_MAJOR_MINOR="${TORCH_VERSION%+*}"
+TORCH_MINOR="${TORCH_MAJOR_MINOR#*.}"
+if [ "${TORCH_MAJOR_MINOR%%.*}" -lt 2 ] || { [ "${TORCH_MAJOR_MINOR%%.*}" -eq 2 ] && [ "${TORCH_MINOR%%.*}" -lt 7 ]; }; then
 python3 - <<'EOF'
 from pathlib import Path
 import sys
@@ -48,6 +52,7 @@ src = src.replace("kernel_size: list[int]", "kernel_size: typing.List[int]")
 src = src.replace("is_causal: list[bool]", "is_causal: typing.List[bool]")
 path.write_text(src)
 EOF
+fi
 
 # Install ComfyUI Custom Nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git custom_nodes/ComfyUI-Manager
