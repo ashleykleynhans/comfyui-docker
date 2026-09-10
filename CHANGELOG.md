@@ -10,6 +10,18 @@ base image, Torch, xformers, or tooling changes that shipped alongside it.
 ## [v0.35.0] - 2026-09-10
 - Bump ComfyUI to v0.35.0.
 - Bump Application Manager to 2.0.2.
+- Fixed: Extend the cu124 torch 2.6.0 `comfy-kitchen` patch (first added in
+  v0.31.0 for `na.py`'s `kernel_size: list[int]` / `is_causal: list[bool]`)
+  to cover all modules. comfy-kitchen 0.2.33 (pinned by ComfyUI v0.35.0)
+  adds `sol_attn` with `sink_blocks: list[int]` / `sink_q: list[int]` which
+  hits the same `infer_schema` failure
+  (`Parameter sink_blocks has unsupported type list[int]`) as the `na3d` op.
+  Now patches every `.py` under `comfy_kitchen` that uses `list[int]` /
+  `list[bool]` (and `list[float]` / `list[str]` for future-proofing) to use
+  `typing.List[...]` instead, keeping the package version unchanged so
+  ComfyUI's compatibility check stays happy. Only runs on torch < 2.7
+  images (cu124, torch 2.6.0); cu128 images (torch 2.11.0) handle builtin
+  generics natively and are left unpatched.
 
 ## [v0.34.0] - 2026-08-26
 - Bump ComfyUI to v0.34.0.
