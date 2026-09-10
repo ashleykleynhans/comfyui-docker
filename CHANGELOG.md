@@ -7,6 +7,10 @@ This image tracks upstream [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 releases, so most entries correspond to a ComfyUI version bump along with any
 base image, Torch, xformers, or tooling changes that shipped alongside it.
 
+## [v0.35.0] - 2026-09-10
+- Bump ComfyUI to v0.35.0.
+- Bump Application Manager to 2.0.2.
+
 ## [v0.34.0] - 2026-08-26
 - Bump ComfyUI to v0.34.0.
 

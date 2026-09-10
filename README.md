@@ -27,7 +27,7 @@
 ### All Images Include
 
 * Ubuntu 22.04 LTS
-* [ComfyUI](https://github.com/comfyanonymous/ComfyUI) v0.34.0
+* [ComfyUI](https://github.com/comfyanonymous/ComfyUI) v0.35.0
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
 * [runpodctl](https://github.com/runpod/runpodctl)
@@ -35,7 +35,7 @@
 * [RunPod File Uploader](https://github.com/kodxana/RunPod-FilleUploader)
 * [croc](https://github.com/schollz/croc)
 * [rclone](https://rclone.org/)
-* [Application Manager](https://github.com/ashleykleynhans/app-manager) 2.0.1
+* [Application Manager](https://github.com/ashleykleynhans/app-manager) 2.0.2
 * [CivitAI Downloader](https://github.com/ashleykleynhans/civitai-downloader)
 
 ## Available on RunPod
