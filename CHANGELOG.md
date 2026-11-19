@@ -7,6 +7,9 @@ This image tracks upstream [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 releases, so most entries correspond to a ComfyUI version bump along with any
 base image, Torch, xformers, or tooling changes that shipped alongside it.
 
+## [v0.46.0] - 2026-11-19
+- Bump ComfyUI to v0.46.0.
+
 ## [v0.45.0] - 2026-11-11
 - Bump ComfyUI to v0.45.0.
 
